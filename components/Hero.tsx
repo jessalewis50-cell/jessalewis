@@ -4,7 +4,7 @@ import CadenceStrip from "./CadenceStrip";
 // Hero
 //
 // The first thing anyone sees. Job: in five seconds, tell a hiring manager
-// who you are and why the two projects below are worth their time.
+// who you are and why the three projects below are worth their time.
 //
 // EDIT: the headline and pitch text below are placeholders in your voice —
 // rewrite them to sound like you.
@@ -20,7 +20,7 @@ export default function Hero() {
         Jess Lewis
       </h1>
       <p className="mt-5 max-w-[52ch] font-body text-lg leading-relaxed text-graphite">
-        I plan the roadmap, then I ship it myself. Below are two apps I built
+        I plan the roadmap, then I ship it myself. Below are three apps I built
         end to end — no engineering team, just me and a lot of debugging —
         as a way of showing how I actually think through a product, not just
         talk about it.
