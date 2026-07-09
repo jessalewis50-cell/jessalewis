@@ -27,12 +27,6 @@ export default function Hero() {
       </p>
       <div className="mt-8 flex flex-wrap gap-3 font-mono text-sm">
         <a
-          href="/resume.pdf"
-          className="rounded-sm border border-ink px-4 py-2 text-ink transition hover:bg-ink hover:text-paper"
-        >
-          Download résumé
-        </a>
-        <a
           href="https://www.linkedin.com/in/jess-a-lewis/"
           className="rounded-sm border border-line px-4 py-2 text-graphite transition hover:border-graphite"
         >

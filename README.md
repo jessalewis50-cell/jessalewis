@@ -14,7 +14,7 @@ Here's what each piece does and why it's separate from the others.
   (usually from `data/projects.ts`) and decides how it *looks* on the page.
   You shouldn't need to touch these much unless you want to change the
   design itself.
-  - `Hero.tsx` — the top of the page: your name, your pitch, résumé link.
+  - `Hero.tsx` — the top of the page: your name, your pitch, contact links.
   - `CaseStudy.tsx` — the template used for *both* Cadence and Notes App.
     One template, two projects — so if you improve the layout, both
     projects get better at once.
@@ -58,8 +58,8 @@ Good first prompts to hand Claude Code, in roughly this order:
    them into data/projects.ts."*
 3. *"Update the email and LinkedIn links in Hero.tsx and Footer.tsx to my
    real ones."*
-4. *"Add a real resume.pdf to the public folder and confirm the download
-   link in Hero.tsx works."*
+4. *"Add screenshots to the public/images folder and wire them into the
+   case studies."*
 5. Once you're happy with it: *"Help me deploy this to Vercel."* (Same flow
    you already used for the Notes App.)
 
