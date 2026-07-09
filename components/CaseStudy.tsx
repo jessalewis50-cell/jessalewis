@@ -5,7 +5,7 @@ import { Project } from "@/data/projects";
 // CaseStudy
 //
 // Renders ONE project as a "log entry": status badge, the problem you were
-// solving, the decisions you made, and the trade-offs/what's next. This
+// solving, the features you built, and what's next. This
 // component doesn't contain any of your actual words — it just lays out
 // whatever project object gets passed to it. To change what it says, edit
 // data/projects.ts, not this file.
@@ -27,7 +27,7 @@ export default function CaseStudy({ project }: { project: Project }) {
       id={project.id}
       className="mx-auto max-w-content px-6 py-10 scroll-mt-8"
     >
-      {/* --- Header: name, status badge, timeframe, stack --- */}
+      {/* --- Header: name, status badge, stack --- */}
       <div className="flex flex-wrap items-center gap-3">
         <h2 className="font-display text-2xl font-bold text-ink sm:text-3xl">
           {project.name}
@@ -39,7 +39,7 @@ export default function CaseStudy({ project }: { project: Project }) {
         </span>
       </div>
       <p className="mt-1 font-mono text-xs text-graphite">
-        {project.timeframe} · {project.stack.join(" / ")}
+        {project.stack.join(" / ")}
       </p>
       <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-ink">
         {project.tagline}
@@ -68,31 +68,31 @@ export default function CaseStudy({ project }: { project: Project }) {
         </p>
       </div>
 
-      {/* --- Key decisions --- */}
+      {/* --- Features --- */}
       <div className="mt-6">
         <h3 className="font-mono text-xs uppercase tracking-widest text-graphite">
-          Key decisions
+          Features
         </h3>
         <ul className="mt-2 max-w-[65ch] space-y-2">
-          {project.decisions.map((decision, i) => (
+          {project.features.map((feature, i) => (
             <li key={i} className="flex gap-3 leading-relaxed text-ink">
               <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brass" />
-              <span>{decision}</span>
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* --- Trade-offs / what's next --- */}
+      {/* --- What's next --- */}
       <div className="mt-6">
         <h3 className="font-mono text-xs uppercase tracking-widest text-graphite">
-          Trade-offs &amp; what&apos;s next
+          What&apos;s next
         </h3>
         <ul className="mt-2 max-w-[65ch] space-y-2">
-          {project.tradeoffs.map((tradeoff, i) => (
+          {project.whatsNext.map((item, i) => (
             <li key={i} className="flex gap-3 leading-relaxed text-ink">
               <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-graphite" />
-              <span>{tradeoff}</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>

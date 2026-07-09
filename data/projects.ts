@@ -21,8 +21,8 @@ export type Project = {
   timeframe: string; // e.g. "2025 — present"
   stack: string[];
   problem: string;
-  decisions: string[];
-  tradeoffs: string[];
+  features: string[];
+  whatsNext: string[];
   liveUrl?: string;
   repoUrl?: string;
   // Drop screenshot files in /public/images/<folder> and reference them here.
@@ -30,6 +30,34 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "product-sense",
+    name: "Product Sense",
+    tagline:
+      "A browser game where you learn product management in six lessons, then have to survive it — real sprints, real trade-offs, and stakeholders with long memories.",
+    status: "shipped",
+    timeframe: "2026",
+    stack: ["Next.js", "TypeScript", "Zustand"],
+    problem:
+      "Product sense is the one PM skill everyone screens for and nobody can teach from a book. Reading about prioritization doesn't put you in the room where two teams and three stakeholder groups all want something different. I wanted a place to practise making those calls and then live with them, rather than just describing what I'd theoretically do.",
+    features: [
+      "Six lessons that each move from concept cards and key terms to a short quiz, then a scoped drill of one to three sprints that exercises exactly what you just learned.",
+      "Career Mode, unlocked once the lessons are done: you start as an Associate PM with one dev team and two user groups, and every promotion adds another team and another stakeholder group to keep happy.",
+      "Consequences that stick — score well and you're promoted, but let two user groups churn and the run is over.",
+      "A pure, seeded, deterministic game engine: the same seed produces the same game, which makes the simulation testable rather than a black box of randomness.",
+      "Runs entirely in the browser, with progress saved locally — no account, no backend, no setup.",
+    ],
+    whatsNext: [
+      "More lessons and drills beyond the initial six, covering the parts of the job the first pass didn't reach.",
+      "Cloud-synced progress, so a career run isn't tied to one browser.",
+      "Deeper stakeholder simulation — groups whose expectations shift over a run rather than staying fixed.",
+    ],
+    liveUrl: "https://product-sense-eight.vercel.app/",
+    repoUrl: "https://github.com/jessalewis50-cell/Product-Sense",
+    images: [
+      // { src: "/images/product-sense/career-mode.png", alt: "Product Sense career mode dashboard" },
+    ],
+  },
   {
     id: "cadence",
     name: "Cadence",
@@ -40,14 +68,15 @@ export const projects: Project[] = [
     stack: ["Next.js", "Tailwind", "Supabase"],
     problem:
       "Most productivity tools keep your calendar and your focus timer separate, so every context switch costs you momentum. I wanted one view where picking a scheduled task and starting a focus session were the same action, not two.",
-    decisions: [
-      "Unified timer-and-schedule-block architecture: focusing a block loads it directly into the Pomodoro timer, so there's no separate 'start a task' step.",
-      "Four-table Supabase schema with UUID keys and Row Level Security, designed so each user's data is isolated by default rather than bolted on later.",
-      "Scoped v1 to Day view only. Week and month views were cut on purpose so I could ship something people could actually use, rather than something 80% finished on every screen.",
+    features: [
+      "Schedule blocks that double as focus sessions — clicking a block loads it straight into the Pomodoro timer, so there's no separate 'start a task' step.",
+      "A built-in Pomodoro timer that always knows which task you're working on, instead of running as a disconnected countdown.",
+      "A Day view that lays out your schedule as blocks you can plan against and work from in the same place.",
+      "Accounts with per-user data isolation, so your schedule is private by default rather than protected as an afterthought.",
     ],
-    tradeoffs: [
-      "No week/month view yet — deliberately deferred until the Day view experience is solid.",
-      "Long-term plan is for Cadence to read to-dos from my Notes App and auto-populate schedule blocks. Keeping the two apps as separate codebases (connected later via a shared Supabase project or a lightweight API) rather than merging them, so each stays simple on its own.",
+    whatsNext: [
+      "Enhancing the week and month views, so planning across a longer horizon feels as considered as the Day view does.",
+      "Reading to-dos directly from my Notes App to auto-populate schedule blocks, connecting the two apps through a shared Supabase project or a lightweight API while keeping each codebase simple on its own.",
     ],
     liveUrl: "https://cadence-seven-rho.vercel.app/login",
     repoUrl: "https://github.com/jessalewis50-cell/Cadence",
@@ -65,14 +94,16 @@ export const projects: Project[] = [
     stack: ["React", "Supabase", "Anthropic API"],
     problem:
       "I wanted a notes tool that didn't force a choice between fast typing and messy handwritten thoughts — something that could take a photo of handwriting and turn it into clean, searchable text without leaving the app.",
-    decisions: [
-      "Used Quill.js for rich text editing rather than building an editor from scratch, so I could focus my time on the AI handwriting feature that actually differentiates the app.",
-      "Routed handwriting OCR through a Vercel serverless function that calls the Anthropic API, so the API key never touches the browser.",
-      "Added Supabase auth with a guest mode, so people can try the app immediately without creating an account first.",
-      "Built autosave so a note is never lost mid-thought.",
+    features: [
+      "AI handwriting-to-text: photograph a page of handwritten notes and get back clean, searchable text without leaving the app.",
+      "Rich text editing built on Quill.js, so formatting a note feels like a real editor rather than a plain textarea.",
+      "Autosave, so a note is never lost mid-thought.",
+      "Guest mode alongside full accounts — you can try the app immediately without signing up first.",
     ],
-    tradeoffs: [
-      "Solved a CORS error, an editor cursor-jumping bug, an ESLint-as-errors build failure on Vercel, and a note-deletion bug caused by mixing integer and UUID IDs — each one taught me something about how the pieces actually fit together, not just how to make an error message go away.",
+    whatsNext: [
+      "AI-generated quizzes drawn from your own notes, so you can test what you actually retained instead of re-reading.",
+      "Catered learning plans that build a path through a topic you're interested in, rather than leaving you to sequence it yourself.",
+      "AI restructuring that reorganizes loose notes into something cohesive — shaped the way the material is best learned, not the order you happened to write it in.",
     ],
     liveUrl: "https://notes-app-tau-livid.vercel.app",
     repoUrl: "https://github.com/jessalewis50-cell/notes-app",
