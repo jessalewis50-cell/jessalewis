@@ -15,7 +15,7 @@ Here's what each piece does and why it's separate from the others.
   You shouldn't need to touch these much unless you want to change the
   design itself.
   - `Hero.tsx` — the top of the page: your name, your pitch, contact links.
-  - `CaseStudy.tsx` — the template used for *both* Cadence and Notes App.
+  - `CaseStudy.tsx` — the template used for *both* Cadence and Almanac.
     One template, two projects — so if you improve the layout, both
     projects get better at once.
   - `CadenceStrip.tsx` — the little pulse-line divider between sections.
@@ -61,7 +61,7 @@ Good first prompts to hand Claude Code, in roughly this order:
 4. *"Add screenshots to the public/images folder and wire them into the
    case studies."*
 5. Once you're happy with it: *"Help me deploy this to Vercel."* (Same flow
-   you already used for the Notes App.)
+   you already used for Almanac.)
 
 ## Notes for later
 

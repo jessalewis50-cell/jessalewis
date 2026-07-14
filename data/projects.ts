@@ -76,7 +76,7 @@ export const projects: Project[] = [
     ],
     whatsNext: [
       "Enhancing the week and month views, so planning across a longer horizon feels as considered as the Day view does.",
-      "Reading to-dos directly from my Notes App to auto-populate schedule blocks, connecting the two apps through a shared Supabase project or a lightweight API while keeping each codebase simple on its own.",
+      "Reading to-dos directly from my Almanac to auto-populate schedule blocks, connecting the two apps through a shared Supabase project or a lightweight API while keeping each codebase simple on its own.",
     ],
     liveUrl: "https://cadence-seven-rho.vercel.app/login",
     repoUrl: "https://github.com/jessalewis50-cell/Cadence",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
   },
   {
     id: "notes-app",
-    name: "Notes App",
+    name: "Almanac",
     tagline:
       "A notes app with rich text editing and AI handwriting-to-text, built and deployed end to end.",
     status: "shipped",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     liveUrl: "https://notes-app-tau-livid.vercel.app",
     repoUrl: "https://github.com/jessalewis50-cell/notes-app",
     images: [
-      // { src: "/images/notes-app/editor.png", alt: "Notes App rich text editor with sidebar" },
+      // { src: "/images/notes-app/editor.png", alt: "Almanac rich text editor with sidebar" },
     ],
   },
 ];

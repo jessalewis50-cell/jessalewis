@@ -28,7 +28,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Jess Lewis — Product Manager & Builder",
   description:
-    "Product manager who ships. Case studies on Product Sense, Cadence, and Notes App — three apps built from scratch, no engineering team.",
+    "Product manager who ships. Case studies on Product Sense, Cadence, and Almanac — three apps built from scratch, no engineering team.",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ import type { Config } from "tailwindcss";
 // centralized here means if you ever want to change the look, you change it
 // in ONE place instead of hunting through every component.
 //
-// Concept: a "field log" — Cadence and Notes App are both about time and
+// Concept: a "field log" — Cadence and Almanac are both about time and
 // notes, so the site itself reads like a builder's logbook. Paper background,
 // ink text, a brass accent (like a clock hand) for anything "active," and a
 // muted ledger-green for "done/shipped" states.
