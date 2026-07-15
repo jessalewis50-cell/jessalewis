@@ -105,7 +105,7 @@ export const projects: Project[] = [
       "Catered learning plans that build a path through a topic you're interested in, rather than leaving you to sequence it yourself.",
       "AI restructuring that reorganizes loose notes into something cohesive — shaped the way the material is best learned, not the order you happened to write it in.",
     ],
-    liveUrl: "https://notes-app-tau-livid.vercel.app",
+    liveUrl: "https://thealmanac.vercel.app",
     repoUrl: "https://github.com/jessalewis50-cell/notes-app",
     images: [
       // { src: "/images/notes-app/editor.png", alt: "Almanac rich text editor with sidebar" },
