@@ -24,7 +24,6 @@ export type Project = {
   features: string[];
   whatsNext: string[];
   liveUrl?: string;
-  repoUrl?: string;
   // Drop screenshot files in /public/images/<folder> and reference them here.
   images: { src: string; alt: string }[];
 };
@@ -53,7 +52,6 @@ export const projects: Project[] = [
       "Deeper stakeholder simulation — groups whose expectations shift over a run rather than staying fixed.",
     ],
     liveUrl: "https://product-sense-eight.vercel.app/",
-    repoUrl: "https://github.com/jessalewis50-cell/Product-Sense",
     images: [
       // { src: "/images/product-sense/career-mode.png", alt: "Product Sense career mode dashboard" },
     ],
@@ -79,7 +77,6 @@ export const projects: Project[] = [
       "Reading to-dos directly from my Almanac to auto-populate schedule blocks, connecting the two apps through a shared Supabase project or a lightweight API while keeping each codebase simple on its own.",
     ],
     liveUrl: "https://cadence-seven-rho.vercel.app/login",
-    repoUrl: "https://github.com/jessalewis50-cell/Cadence",
     images: [
       // { src: "/images/cadence/day-view.png", alt: "Cadence day view with schedule blocks and timer" },
     ],
@@ -106,7 +103,6 @@ export const projects: Project[] = [
       "AI restructuring that reorganizes loose notes into something cohesive — shaped the way the material is best learned, not the order you happened to write it in.",
     ],
     liveUrl: "https://thealmanac.vercel.app",
-    repoUrl: "https://github.com/jessalewis50-cell/notes-app",
     images: [
       // { src: "/images/notes-app/editor.png", alt: "Almanac rich text editor with sidebar" },
     ],

@@ -108,14 +108,6 @@ export default function CaseStudy({ project }: { project: Project }) {
             View live ↗
           </a>
         )}
-        {project.repoUrl && (
-          <a
-            href={project.repoUrl}
-            className="rounded-sm border border-line px-4 py-2 text-graphite transition hover:border-graphite"
-          >
-            View code ↗
-          </a>
-        )}
       </div>
     </section>
   );

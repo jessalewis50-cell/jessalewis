@@ -18,12 +18,6 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/jess-a-lewis/" className="hover:text-brass">
           LinkedIn ↗
         </a>
-        <a
-          href="https://github.com/jessalewis50-cell"
-          className="hover:text-brass"
-        >
-          GitHub ↗
-        </a>
       </div>
       <p className="mt-10 font-mono text-xs text-graphite/70">
         Built by hand, not a template.
